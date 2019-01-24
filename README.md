@@ -1,5 +1,4 @@
 # Homework Grading Scripts
---
 
 Simple scripts to automate a bit of the homework grading process for instructors and TA's.
 
