@@ -9,13 +9,13 @@ Scripts include:
 
 This script will batch submit the homeowrk grading issues for all github repos (student homework repos) in the current path. This is to be used after you have graded all the homework repos on your local machine by modifying the ```ISSUE_TEMPLATE.md``` file that is automatically generated in the homework repos. It eliminates the need to manually create an issue and fill out the grade online in github/github classroom. 
 
-### Installation of Required Tools
+#### Installation of Required Tools
 
 The shell script relies on the ``` github/hub ``` tool to create issues by command line. Follow the [installation instructions](https://github.com/github/hub) found at their github page to install the tool on your device.
 
 User documentation for the Hub tool can be found [here](https://hub.github.com/hub.1.html). It extends many git commands and also provides new commands of its own.
 
-### Usage
+#### Usage
 
 1. Download all the homework repos to your local machine. When grading the homework, modify the ```ISSUE_TEMPLATE.md``` file in each repo rather than making an issue through the github webiste.
 2. Copy ```push_hw_issues.sh``` into the parent directory of all the homework repos.
