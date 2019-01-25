@@ -19,7 +19,7 @@ User documentation for the Hub tool can be found [here](https://hub.github.com/h
 
 1. Download all the homework repos to your local machine. Make sure to place them all into one _empty_ local directory. This will be the parent directory where the shell script is kept. 
 2. When grading the homework, modify the `ISSUE_TEMPLATE.md` file in each repo rather than making an issue through the github webiste.
-3. Place `push_hw_issues.sh` into the parent directory where all the homework repos are stored (one level above each student's repo). You should only need one copy of this script.
+3. Place `push_hw_issues.sh` into the parent directory where all the homework repos are stored (one level above each student's repo). You should only need one copy of this script.  
 _NOTE: only student homework repos can be located in this directory. The shell script moves into each sub-directory (homework repo) and tries to submit an issue. It will do this even for directories that are not github repos._
 4. Modify the `title` variable in the shell script as the issue title you want to specify, e.g. "SEDS HW 1 Grade".
 5. Once you are ready to send out the issues to _all_ the students, simply run the shell script in the parent directory.  
