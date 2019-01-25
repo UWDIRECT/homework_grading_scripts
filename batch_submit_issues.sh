@@ -45,8 +45,9 @@ do
 
 	# creating the issue, url of new issue will be copied to your computer clipboard
 	# using the alternative command will not copy to your clipboard, but will print an error line insted
-	#hub issue create -c -F $tmpfile
-	cat $tmpfile
+	hub issue create -c -F $tmpfile
+	# uncomment below for debugging
+	# cat $tmpfile
 
 	# removing the temporary file
 	rm $tmpfile
