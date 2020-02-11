@@ -32,8 +32,9 @@ This script will batch submit the homework grades (github issues) for all the st
 4. Once you are ready to send out the issues to _all_ the students, simply run the shell script using your issue title as the first and only argument.  Don't forget to use quotes to encapsulate the argument if it has spaces.
 
 
-## `batch_pull_grades.sh`
+## `batch_grade_pull.sh`
 
+This script will batch pull homework grades (github issues) for all the student homework repos The script should be placed in the parent directory where you have all the homework repos stored locally. Run this script _once_ in the parent directory to record initial and final grades for each student.
 
 #### Features
 * Filters out issues and comments made by anyone else but the specified grader.  
@@ -48,12 +49,9 @@ This script will batch submit the homework grades (github issues) for all the st
 #### Usage
 
 1. Download all the homework repos to your local machine.
-2. Copy ```batch_pull_grades.sh``` into the parent directory of all the homework repos.
+2. Copy ```batch_grade pull.sh``` into the parent directory of all the homework repos.
 3. Note the issue title where grading occurred, e.g. "SEDS HW1 Feedback".
 4. Decide on the csv filename for recording grades, e.g. "grades.csv".
 5. Once you are ready to pull grades, simply run the shell script with the following arguments, suing quotes to encapsulate arguments with spaces:
 
-`batch_pull_grades.sh <grader's github username> <issue title> <filename>`
-
-
-
+`batch_grade_pull.sh <grader's github username> <issue title> <filename>`
