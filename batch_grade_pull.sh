@@ -114,7 +114,7 @@ elif [[ $comments == *"comment by @$grader"* ]]; then
 
 	# will search grader comments from the end of the issue in search of re-grade
 	n=1
-	while [[ $final == '' ]] || [[ n -lt 100 ]]
+	while [[ $final == '' ]]
 	do
 		# re-grade is found, while loop will end
 		if [[ $end == *'/5'* ]]; then
@@ -123,6 +123,8 @@ elif [[ $comments == *"comment by @$grader"* ]]; then
 
 		# re-grade is not found, will check for more grader comments to search
 		elif [[ $beg != *"comment by @$grader"* ]]; then
+			echo "WARNING: no re-grade for '$name'"
+			final=$initial
 			break
 
 		# will reset next loop with next-last grader comment
@@ -134,6 +136,10 @@ elif [[ $comments == *"comment by @$grader"* ]]; then
 
 		# will prevent loop from running more than 100 iterations
 		(( n++ ))
+		if [[ n -gt 100 ]]; then
+			"WARNING: no re-grade for '$name'"
+			break
+		fi
 	done
 
 # will alert the grader if no re-grade is found for a student
