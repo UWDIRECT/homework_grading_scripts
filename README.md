@@ -44,7 +44,7 @@ This script will batch pull homework grades (github issues) for all the student 
 * Only student homework repos can be located in the directory with this script. The shell script moves into each sub-directory (homework repo) and tries to submit an issue, even for directories that are not github repos.
 * All grades must be submitted in grading issues with the same title. This will be true if `batch_submit_issues.sh` was used to submit the original grades.  
 * All re-grades should be given as comments to the original grading issue.  
-* Grades must be given in the form `x/5` for the script to find the scores.
+* Grades must be given in the form `x/5` for the script to find the scores and only whole points (e.g. 4, not 4.5) are accepted.
 
 #### Usage
 
