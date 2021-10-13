@@ -51,5 +51,8 @@ do
 
 	# removing the temporary file
 	rm $tmpfile
+
+	# pause to avoid abuse detection
+	sleep 5
 done
 
