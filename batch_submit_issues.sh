@@ -31,6 +31,8 @@ do
 
 	echo $dir
 	cd $dir
+	# Set default repo to student's fork, not master
+	gh repo set-default "UWSEDS/$(basename "$PWD")"
 
 	if [ ! -e ISSUE_TEMPLATE.md ]; then
 		echo "WARNING: unable to find an ISSUE_TEMPLATE.md file, skipping this directory..."
@@ -45,7 +47,7 @@ do
 
 	# creating the issue, url of new issue will be copied to your computer clipboard
 	# using the alternative command will not copy to your clipboard, but will print an error line insted
-	hub issue create -c -F $tmpfile
+	gh issue create -t $title -F $tmpfile
 	# uncomment below for debugging
 	# cat $tmpfile
 
@@ -55,4 +57,3 @@ do
 	# pause to avoid abuse detection
 	sleep 5
 done
-
