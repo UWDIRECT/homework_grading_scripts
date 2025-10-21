@@ -1,15 +1,18 @@
 #!/bin/bash
 
 #########################################
-# Normal mode (stops on first error)
-# ./clone_all.sh
+# Usage:
+#   Normal mode (stops on first error)
+#   ./clone_all.sh
 
-# Force mode (continues despite errors)
-# ./clone_all.sh -f
+#   Force mode (continues despite errors)
+#   ./clone_all.sh -f
 #########################################
  
-# Student Name list
-LIST_FILE="to_grade.txt"
+# Student GH username list - one per newline
+LIST_FILE="student_gh_usernames.txt"
+ORGANIZATION="UWSEDS"
+HOMEWORK_NAME="homework-0-"
 
 # Parse command-line arguments
 FORCE=false
@@ -40,8 +43,7 @@ while IFS= read -r name || [ -n "$name" ]; do
         continue
     fi
     
-    repo_url="git@github.com:UWSEDS/homework-0-${name}.git"
-    echo "Cloning repository for: $name"
+    repo_url="git@github.com:${ORGANIZATION}/${HOMEWORK_NAME}${name}.git"
     
     # Attempt to clone
     if git clone "$repo_url" 2>&1; then
